@@ -1,0 +1,83 @@
+Aplicação de cálculo de juros
+
+O objetivo da aplicação é calcular o valor total da dívida com juros com base nas informações fornecidas a ela.
+
+Requisitos:
+
+O usuário da aplicação deve informar o valor da dívida e o número de dias que ela se encontra em atraso.
+O valor da dívida deve ser maior que zero, caso contrário, a aplicação deve informar ao usuário do problema e encerrar 
+O número de dias nos ajuda a determinar a taxa de juros.
+Dívidas com mais de 15 de atraso tem uma taxa de 10% de juros aplicada sobre o valor da dívida,
+já dividas com menos de 15 dias de atraso tem uma taxa de apenas 5% de juros sobre o valor da dívida.
+Os juros só devem ser aplicados, se houver ao menos um dia de atraso, do contrário, o usuário é considerado "em dia" e a aplicação deve ser encerrada com uma mensagem de aviso.
+
+
+Método 5Q's  para montar um algorítimo:
+
+Analise criticamente o problema e descubra:
+ (Tente explicar este problema para você mesmo em voz alta e 
+peça mais informações/investigue mais até você 
+compreender completamente o problema.)
+
+
+ 1. Quais são os dados de entrada necessários?
+ 2. O que devo fazer com estes dados?
+ 3. Quais são as restrições deste problema?
+ 4. Qual é o resultado esperado?
+ 5. Qual é sequência de passos a ser feitas para 
+chegar ao resultado esperado
+
+1. O valor da dívida e a quantidade de boletos atrasados
+
+2. Com base na quantidade de boletos atrasados deve-se calcular uma porcentagem de juros em cima do valor da dívida com a seguinte fórmula: J = C*i*t
+
+3. Se o valor da dívida for igual a 0, o programa deve exibir "O valor da dívida deve ser acima de 0" e o programa se encerra
+   Se a quantidade de boletos for igual a 0, o programa deve exibir "Seus boletos estão em dia" e o programa se encerra
+   Se a quantidade de boletos for menor ou igual a 15, calcular um juros de 5%
+   Senao, o juros deve ser 10%
+
+4.Que o programa calcule o juros com base na quantidade de boletos atrasados em cima do valor fornecido e exiba na tela, o valor original, a quantidade de boletos atrasados, o juros aplicado
+e o valor total com juros, e que siga corretamente as restrições fornecidas.
+
+
+5.
+	import EntradaDados from 'readline-sync'
+
+	console.log("Aplicação de cálculo de juros")
+
+	let juros;
+	let total;
+	let valor_divida = EntradaDados.question("Informe o valor da dívida: ")
+
+
+	if( valor_divida > 0){
+			
+		let boletos = Entrada.question("Informe a quantidade de boletos atrasados: ")
+
+		if(boletos  > 0){
+			else if ( boletos > 15){
+				juros = 10;
+				total = (valor_divida/100)*juros + valor_divida;
+}
+			else if {
+				juros = 5;
+				total = (valor_divida/100)*juros + valor_divida;
+}		
+			else{
+				console.log("Suas dívidas estão em dia");
+}
+
+	console.log("Valor da dívida: R$"+valor_divida);
+	console.log("Boletos: "+boletos);
+	console.log("juros: "+juros);
+	console.log("Total: "+total);
+
+}
+
+	
+	else{
+		console.log("O valor da dívida deve ser acima de 0!");
+}
+
+}
+	
